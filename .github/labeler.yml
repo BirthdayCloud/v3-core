@@ -1,5 +1,5 @@
 version: v1
-# no-op
+
 labels:
   - label: kind/feature
     sync: true
