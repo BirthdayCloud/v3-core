@@ -7,8 +7,12 @@
   },
   "version": "0.0.0",
   "files": [
-    "contracts/**",
-    "!contracts/test"
+    "contracts/interfaces",
+    "contracts/libraries",
+    "contracts/NoDelegateCall.sol",
+    "contracts/UniswapV3Factory.sol",
+    "contracts/UniswapV3Pool.sol",
+    "contracts/UniswapV3PoolDeployer.sol"
   ],
   "engines": {
     "node": ">=10"
