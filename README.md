@@ -10,6 +10,9 @@ This repository contains the core smart contracts for the Uniswap V3 Protocol.
 For higher level contracts, see the [uniswap-v3-periphery](https://github.com/Uniswap/uniswap-v3-periphery)
 repository.
 
+# Installing
+**NOTE: Install the project with `yarn install --frozen-lockfile` since the dependency tree is messed up.**
+
 ## Bug bounty
 
 This repository is subject to the Uniswap V3 bug bounty program, per the terms defined [here](./bug-bounty.md).
