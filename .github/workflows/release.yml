@@ -31,6 +31,7 @@ jobs:
       - uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3.4.1
         with:
           node-version: 18
+          registry-url: 'https://npm.pkg.github.com'
           cache: yarn
 
       - run: yarn install --frozen-lockfile
