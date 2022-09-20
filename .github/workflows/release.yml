@@ -35,7 +35,7 @@ jobs:
 
       - run: yarn install --frozen-lockfile
 
-      - run: yarn exec npm version ${{ needs.version.outputs.result }} --git-tag-version=false
+      - run: yarn exec npm version --no-git-tag-version ${{ needs.version.outputs.result }}
 
       - run: npm config set "//npm.pkg.github.com/:_authToken" "\${NPM_AUTH_TOKEN}" --location=project
 
