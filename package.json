@@ -1,28 +1,17 @@
 {
-  "name": "@uniswap/v3-core",
-  "description": "🦄 Core smart contracts of Uniswap V3",
+  "name": "@birthdaycloud/uniswap-v3-core",
+  "description": "Birthday Cloud copy of core smart contracts of Uniswap V3",
   "license": "BUSL-1.1",
   "publishConfig": {
     "access": "public"
   },
-  "version": "1.0.1",
-  "homepage": "https://uniswap.org",
-  "keywords": [
-    "uniswap",
-    "core",
-    "v3"
-  ],
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Uniswap/uniswap-v3-core"
+    "url": "https://github.com/BirthdayCloud/v3-core"
   },
   "files": [
-    "contracts/interfaces",
-    "contracts/libraries",
-    "artifacts/contracts/UniswapV3Factory.sol/UniswapV3Factory.json",
-    "artifacts/contracts/UniswapV3Pool.sol/UniswapV3Pool.json",
-    "artifacts/contracts/interfaces/**/*.json",
-    "!artifacts/contracts/interfaces/**/*.dbg.json"
+    "contracts/**"
   ],
   "engines": {
     "node": ">=10"
@@ -54,6 +43,7 @@
   },
   "scripts": {
     "compile": "hardhat compile",
-    "test": "hardhat test"
+    "test": "hardhat test",
+    "format-repo": "npx ts-node format-repo.ts"
   }
 }
