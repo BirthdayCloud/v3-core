@@ -1,7 +1,6 @@
 import { ethers } from 'hardhat'
 import { TickBitmapTest } from '../typechain/TickBitmapTest'
 import { expect } from './shared/expect'
-import snapshotGasCost from './shared/snapshotGasCost'
 
 describe('TickBitmap', () => {
   let tickBitmap: TickBitmapTest
@@ -69,18 +68,6 @@ describe('TickBitmap', () => {
       expect(await tickBitmap.isInitialized(-259)).to.eq(true)
       expect(await tickBitmap.isInitialized(-229)).to.eq(false)
     })
-
-    it('gas cost of flipping first tick in word to initialized', async () => {
-      await snapshotGasCost(await tickBitmap.getGasCostOfFlipTick(1))
-    })
-    it('gas cost of flipping second tick in word to initialized', async () => {
-      await tickBitmap.flipTick(0)
-      await snapshotGasCost(await tickBitmap.getGasCostOfFlipTick(1))
-    })
-    it('gas cost of flipping a tick that results in deleting a word', async () => {
-      await tickBitmap.flipTick(0)
-      await snapshotGasCost(await tickBitmap.getGasCostOfFlipTick(0))
-    })
   })
 
   describe('#nextInitializedTickWithinOneWord', () => {
@@ -144,16 +131,6 @@ describe('TickBitmap', () => {
         expect(next).to.eq(511)
         expect(initialized).to.eq(false)
       })
-
-      it('gas cost on boundary', async () => {
-        await snapshotGasCost(await tickBitmap.getGasCostOfNextInitializedTickWithinOneWord(255, false))
-      })
-      it('gas cost just below boundary', async () => {
-        await snapshotGasCost(await tickBitmap.getGasCostOfNextInitializedTickWithinOneWord(254, false))
-      })
-      it('gas cost for entire word', async () => {
-        await snapshotGasCost(await tickBitmap.getGasCostOfNextInitializedTickWithinOneWord(768, false))
-      })
     })
 
     describe('lte = true', () => {
@@ -211,16 +188,6 @@ describe('TickBitmap', () => {
 
         expect(next).to.eq(329)
         expect(initialized).to.eq(true)
-      })
-
-      it('gas cost on boundary', async () => {
-        await snapshotGasCost(await tickBitmap.getGasCostOfNextInitializedTickWithinOneWord(256, true))
-      })
-      it('gas cost just below boundary', async () => {
-        await snapshotGasCost(await tickBitmap.getGasCostOfNextInitializedTickWithinOneWord(255, true))
-      })
-      it('gas cost for entire word', async () => {
-        await snapshotGasCost(await tickBitmap.getGasCostOfNextInitializedTickWithinOneWord(1024, true))
       })
     })
   })
