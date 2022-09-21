@@ -12,7 +12,9 @@
     "contracts/NoDelegateCall.sol",
     "contracts/UniswapV3Factory.sol",
     "contracts/UniswapV3Pool.sol",
-    "contracts/UniswapV3PoolDeployer.sol"
+    "contracts/UniswapV3PoolDeployer.sol",
+    "artifacts/contracts/**/*.json",
+    "!artifacts/contracts/**/*.dbg.json"
   ],
   "engines": {
     "node": ">=10"
