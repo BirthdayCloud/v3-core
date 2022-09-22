@@ -14,7 +14,9 @@
     "contracts/UniswapV3Pool.sol",
     "contracts/UniswapV3PoolDeployer.sol",
     "artifacts/contracts/**/*.json",
-    "!artifacts/contracts/**/*.dbg.json"
+    "!artifacts/contracts/**/*.dbg.json",
+    "!typechain",
+    "!cache"
   ],
   "engines": {
     "node": ">=10"
