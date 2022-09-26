@@ -46,16 +46,6 @@
 # Area
 - color: fbca04
   name: area/workflow
-- color: fbca04
-  name: area/codex
-- color: fbca04
-  name: area/constructs
-- color: fbca04
-  name: area/docs
-- color: fbca04
-  name: area/packages
-- color: fbca04
-  name: area/services
 
 # Priority
 - color: d93f0b
