@@ -1,5 +1,5 @@
 {
-  "name": "@birthdaycloud/uniswap-v3-core",
+  "name": "@birthdayresearch/uniswap-v3-core",
   "description": "BirthdayResearch fork of core smart contracts of Uniswap V3",
   "license": "BUSL-1.1",
   "publishConfig": {
